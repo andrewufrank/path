@@ -70,7 +70,8 @@ toFilePath (Path x)  = x
 --
 -- @x == y ≡ show x == show y@
 instance Show (Path b t) where
-  show = show . toFilePath
+  show = show . toFilePath   
+
 
 instance NFData (Path b t) where
   rnf (Path x) = rnf x
